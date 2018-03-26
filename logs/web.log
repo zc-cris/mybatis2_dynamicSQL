@@ -1,0 +1,529 @@
+2018-03-26 at 17:00:34 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 17:00:34 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:00:34 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:00:34 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:00:34 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:00:35 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 17:00:35 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1404565079.
+2018-03-26 at 17:00:35 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@53b7f657]
+2018-03-26 at 17:00:35 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 17:00:35 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 17:00:35 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 17:00:35 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 17:00:35 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 17:25:35 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:26:23 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 17:26:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:26:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:26:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:26:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 17:26:23 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 17:26:24 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 652176954.
+2018-03-26 at 17:26:24 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@26df6e3a]
+2018-03-26 at 17:26:24 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 17:26:24 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 17:26:24 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 17:26:24 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 17:26:24 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 19:05:10 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 19:05:10 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:05:10 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:05:10 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:05:10 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:05:10 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 19:05:11 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1869039062.
+2018-03-26 at 19:05:11 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6f6745d6]
+2018-03-26 at 19:05:11 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 19:05:11 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 19:05:11 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 19:05:11 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 19:05:11 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 19:05:11 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:08:19 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 E  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1070044969.
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@3fc79729]
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 19:08:20 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 19:08:20 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 19:08:20 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 I  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1261764601.
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@4b34fff9]
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 19:11:30 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 19:11:30 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 19:11:30 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 I  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1095273238.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1095273238 to pool.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 1095273238 from pool.
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 19:42:04 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 19:42:04 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 19:42:04 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 I  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:48:51 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:48:52 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 787122337.
+2018-03-26 at 19:48:52 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 I  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:49:23 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 787122337.
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 787122337 from pool.
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 19:49:24 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 19:49:24 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 19:49:24 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:00:00 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 I  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 787122337.
+2018-03-26 at 20:00:01 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 I  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email <init> ()V Code
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 787122337.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 	  &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; 
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 787122337 from pool.
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: select id,name,email,gender from tb_employee where id = ? 
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 1(Integer)
+2018-03-26 at 20:01:03 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==    Columns: id, name, email, gender
+2018-03-26 at 20:01:03 CST TRACE org.apache.ibatis.logging.jdbc.BaseJdbcLogger 165 trace - <==        Row: 1, cris, 1232@qq.com, 0
+2018-03-26 at 20:01:03 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==      Total: 1
+2018-03-26 at 20:31:30 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1095273238.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1095273238 to pool.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 1095273238 from pool.
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: insert tb_employee (name,email,gender) values (?,?,?) 
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 克里斯(String), cris@qq.com(String), 0(String)
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 1
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:31:31 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1095273238 to pool.
+2018-03-26 at 20:32:20 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1095273238.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1095273238 to pool.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 1095273238 from pool.
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: insert tb_employee (name,email,gender) values (?,?,?) 
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 克莉丝汀(String), cristing@qq.com(String), 0(String)
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 1
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@41488b16]
+2018-03-26 at 20:32:21 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1095273238 to pool.
+2018-03-26 at 20:33:52 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 2047368450.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 2047368450 to pool.
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:33:53 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 2047368450 from pool.
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a085d02]
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: update tb_employee set name=?, email=?, gender=? where id=? 
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: avirl(String), avirllavine@163.com(String), 0(String), 1(Integer)
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 1
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a085d02]
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a085d02]
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@7a085d02]
+2018-03-26 at 20:33:54 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 2047368450 to pool.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:34:49 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1827558114.
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1827558114 to pool.
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 1827558114 from pool.
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: delete from tb_employee where id=? 
+2018-03-26 at 20:34:50 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 3(Integer)
+2018-03-26 at 20:34:51 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 1
+2018-03-26 at 20:34:51 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:34:51 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:34:51 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:34:51 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1827558114 to pool.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 1827558114.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1827558114 to pool.
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:40:32 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 1827558114 from pool.
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: delete from tb_employee where id=? 
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 3(Integer)
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 0
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@6cee52e2]
+2018-03-26 at 20:40:33 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 1827558114 to pool.
+2018-03-26 at 20:41:02 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 787122337.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 787122337 from pool.
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: delete from tb_employee where id=? 
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 3(Integer)
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 0
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:41:03 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 20:50:37 CST DEBUG org.apache.ibatis.logging.LogFactory 135 setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j2.Log4j2Impl' adapter.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VFS
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.JBoss6VFS 142 setInvalid - JBoss 6 VFS API is not available in this environment.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.VFS 111 getClass - Class not found: org.jboss.vfs.VirtualFile
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 63 createVFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.VFS$VFSHolder 77 createVFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: Employee.class
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/bean/Employee.class
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4 J  !com/zc/cris/mybatis/bean/Employee  java/lang/Object id Ljava/lang/Integer; name Ljava/lang/String; gender Ljava/lang/Character; email getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this #Lcom/zc/cris/mybatis/bean/Employee; setId (Ljava/lang/Integer;)V getName ()Ljava/lang/String;	     setName (Ljava/lang/String;)V 	getGender ()Ljava/lang/Character;	    	 
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.bean.Employee matches criteria [is assignable to Object]
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 335 forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 406 popConnection - Created connection 787122337.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.class
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: EmployeeMapper.xml
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 113 list - Listing file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.class
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: ����   4   &com/zc/cris/mybatis/dao/EmployeeMapper  java/lang/Object getById 8(Ljava/lang/Integer;)Lcom/zc/cris/mybatis/bean/Employee; add &(Lcom/zc/cris/mybatis/bean/Employee;)Z update 8(Lcom/zc/cris/mybatis/bean/Employee;)Ljava/lang/Integer; remove (Ljava/lang/Integer;)Z 
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 222 findJarForResource - Find JAR URL: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 248 findJarForResource - Not a JAR: file:/D:/eclipse-workspace/mybatis01/bin/com/zc/cris/mybatis/dao/EmployeeMapper.xml
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.DefaultVFS 102 list - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.io.ResolverUtil 256 addIfMatching - Checking to see if class com.zc.cris.mybatis.dao.EmployeeMapper matches criteria [is assignable to Object]
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 137 openConnection - Opening JDBC Connection
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 398 popConnection - Checked out connection 787122337 from pool.
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 101 setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==>  Preparing: insert tb_employee (name,email,gender) values (?,?,?) 
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - ==> Parameters: 克莉丝汀(String), cristing@qq.com(String), 0(String)
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.logging.jdbc.BaseJdbcLogger 159 debug - <==    Updates: 1
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 70 commit - Committing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 123 resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction 91 close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2eea88a1]
+2018-03-26 at 20:50:38 CST DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource 363 pushConnection - Returned connection 787122337 to pool.

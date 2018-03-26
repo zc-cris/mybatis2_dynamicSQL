@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 名称空间为接口的全类名 -->
+<mapper namespace="com.zc.cris.mybatis.dao.EmployeeMapper">
+
+
+	<!-- id：和接口的对应方法绑定 public Employee getById(Integer id); -->
+	<select id="getById" resultType="emp" databaseId="mysql">
+		select
+		id,name,email,gender from tb_employee where id = #{id}
+	</select>
+
+	<!-- 增删该可以定义参数类型 parameterType，但是一般不用定义，并且返回值如果是 Boolean，Integer，Long 类型也无需定义 
+		returnType -->
+	<!-- public boolean add(Employee employee); -->
+	<!-- 获取自增主键的值 mysql如果使用的是自增主键策略，那么可以通过 statement.getGeneratedKeys() 获取到新增数据的id值 
+		useGeneratedKeys:使用自增主键获取主键值策略 keyProperty:指定对应的javaBean的属性值，即mybatis获取到主键值以后封装给javaBean的哪个属性 -->
+	<insert id="add" parameterType="com.zc.cris.mybatis.bean.Employee"
+		useGeneratedKeys="true" keyProperty="id" databaseId="mysql">
+		insert into
+		tb_employee (name,email,gender) values (#{name},#{email},#{gender})
+	</insert>
+
+
+	<!-- Oracle 不支持主键自增：Oracle使用序列来模拟自增，即每次插入数据表的数据的主键都是从序列表中获取的值，那么如何拿到这个值呢？ -->
+	<insert id="add" databaseId="oracle">
+		<!-- keyProperty:查出的主键赋值给javaBean的哪个属性 order="BEFORE"：当前sql在新增sql之前执行 "AFTER":表示当前sql在新增sql之后执行 
+			resultType：查询的数据的返回类型 -->
+		<selectKey keyProperty="id" order="BEFORE" resultType="Integer">
+			<!-- BEFORE:编写查询主键的sql语句 -->
+			select EMPLOYEES_SEQ.nextval from dual
+		</selectKey>
+		<!-- 插入时的主键是从序列表中查询到的 -->
+		insert into employees(EMPLOYEE_ID,LAST_NAME,EMAIL)
+		values
+		(#{id},#{name},#{email})
+
+		<!-- AFTER:编写查询主键的sql语句，这种方式可能存在问题，如果同时插入很多数据，获取的主键值可能是最后一次插入数据的值，所以不建议使用，了解即可 -->
+		<selectKey>
+			select EMPLOYEES_SEQ.currval from dual
+		</selectKey>
+		<!-- 插入时的主键自动从指定的序列表中查询 -->
+		insert into employees(EMPLOYEE_ID,LAST_NAME,EMAIL)
+		values
+		(employees_seq.nextval,#{name},#{email})
+	</insert>
+
+
+	<!-- public Integer update(Employee employee); -->
+	<update id="update">
+		update tb_employee
+		set name=#{name}, email=#{email}, gender=#{gender}
+		where id=#{id}
+	</update>
+
+	<!-- public boolean remove(Integer id); -->
+	<delete id="remove">
+		delete from tb_employee where id=#{id}
+	</delete>
+
+
+</mapper>
