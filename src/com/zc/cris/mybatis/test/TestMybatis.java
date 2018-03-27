@@ -1,9 +1,10 @@
 package com.zc.cris.mybatis.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -22,7 +23,105 @@ class TestMybatis {
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		return sqlSessionFactory;
 	}
+	public SqlSession getSession() throws IOException {
+		SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
+		SqlSession session = sqlSessionFactory.openSession();
+		return session;
+	}
 
+	
+	
+	/*
+	 * 测试使用级联属性或者 association标签（推荐）进行联合查询
+	 * 实际开发中最常用的还是分步式联合查询
+	 */
+	@Test
+	void testUionQuery() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+//		Employee emp = mapper.findEmpAndDeptById(1);
+		Employee emp = mapper.findEmpByStep(1);
+		//测试懒加载
+		System.out.println(emp.getName());
+		System.out.println(emp.getDepartment());
+	}
+	
+	
+	
+	/*
+	 * 测试自定的javaBean封装规则
+	 */
+	@Test
+	void testMyResultMap() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+		Employee emp = mapper.getEmpByIdReturnMyMap(1);
+		System.out.println(emp);
+	}
+	
+	/*
+	 * 测试返回值为map 类型（值为列名，值为封装的java对象）
+	 */
+	@Test
+	void testResultMap2() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+		Map<String, Employee> map = mapper.getEmpByNameLikeReturnMap("克%");
+		System.out.println(map);
+	}
+	
+	/*
+	 * 测试返回值为map 类型（key为列名，值为列值）
+	 */
+	@Test
+	void testResultMap() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+		Map<String, Object> map = mapper.getEmpByIdReturnMap(1);
+		System.out.println(map);
+	}
+	
+	/*
+	 * 测试返回值为List类型，元素为pojo
+	 */
+	@Test
+	void testResultList() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+		
+		List<Employee> list = mapper.getEmpsByNameLike("克%");
+		for (Employee employee : list) {
+			System.out.println(employee);
+		}
+	}
+	
+	/*
+	 * 测试多个参数封装成map在mapper映射文件中的处理情况(推荐)
+	 */
+	@Test
+	void testMap() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+		Map<String, Object> map = new HashMap<>();
+		map.put("id", 2);
+		map.put("name", "克里斯");
+		map.put("table", "tb_employee");
+		Employee emp = mapper.getEmpByMap(map);
+		System.out.println(emp);
+	}
+	
+	/*
+	 * 测试多个参数在mapper映射文件中的处理情况（不推荐使用）
+	 */
+	@Test
+	void testParameters() throws IOException {
+		SqlSession session = getSession();
+		EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
+		Employee emp = mapper.getByIdAndName(2, "克里斯");
+		System.out.println(emp);
+		
+	}
+	
 	/*
 	 * 测试最基本的更新操作 RUD
 	 * 1. mybatis 允许我们增删改操作直接定义以下类型返回值
@@ -31,12 +130,12 @@ class TestMybatis {
 	 */
 	@Test
 	void testRUD() throws IOException {
-		SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
-		SqlSession session = sqlSessionFactory.openSession();
+		SqlSession session = getSession();
 		try {
 			Employee employee = new Employee(null, "克莉丝汀", '0', "cristing@qq.com");
 			EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
 			// 测试新增
+			@SuppressWarnings("unused")
 			boolean result = mapper.add(employee);
 			System.out.println(employee);
 			
@@ -82,9 +181,8 @@ class TestMybatis {
 	 */
 	@Test
 	void test() throws IOException {
-		SqlSessionFactory sqlSessionFactory = getSqlSessionFactory();
-
-		SqlSession session = sqlSessionFactory.openSession();
+		SqlSession session = getSession();
+		
 		try {
 			Employee employee = session.selectOne("com.zc.cris.mybatis.EmployeeMapper.getEmpById", 1);
 			System.out.println(employee);

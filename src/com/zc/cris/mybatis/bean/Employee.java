@@ -9,6 +9,15 @@ public class Employee {
 	private String name;
 	private Character gender;
 	private String email;
+	private Department department;
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
 
 	public Integer getId() {
 		return id;

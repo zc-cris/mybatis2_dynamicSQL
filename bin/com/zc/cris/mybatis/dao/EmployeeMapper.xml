@@ -5,6 +5,167 @@
 <!-- 名称空间为接口的全类名 -->
 <mapper namespace="com.zc.cris.mybatis.dao.EmployeeMapper">
 
+	<!-- 
+		联合查询：
+		1. 使用级联属性封装结果集(不推荐)
+	 -->
+	<resultMap type="com.zc.cris.mybatis.bean.Employee" id="complexEmp">
+		<id column="eid" property="id"/>
+		<result column="ename" property="name"/>
+		<result column="did" property="department.id"/>
+		<result column="dname" property="department.name"/>
+	</resultMap>
+	<!-- 
+		2.使用 association 标签进行联合查询(关联单个对象的情况下,推荐)
+			property:被引用对象在引用对象中的成员属性名
+			javaType：被引用对象的全路径名
+	 -->
+	<resultMap type="com.zc.cris.mybatis.bean.Employee" id="complexEmp2">
+		<id column="eid" property="id"/>
+		<result column="ename" property="name"/>
+		<association property="department" javaType="com.zc.cris.mybatis.bean.Department">
+			<id column="did" property="id"/>
+			<result column="dname" property="name"/>
+		</association>
+	</resultMap>
+	
+	<!-- public Employee findEmpAndDeptById(Integer id); -->
+	<select id="findEmpAndDeptById" resultMap="complexEmp2">
+		select e.id eid, e.name ename, e.email, e.gender, d.id did, d.name dname from tb_employee e,tb_dept d where e.dept_id = d.id and e.id = #{id} 
+	</select>
+	
+	<!-- 
+		3.实际开发中使用最多的还是分布联合查询
+			不同的对象，不同的接口，不同的mapper映射文件，不同的查询方法
+	 -->
+	 <resultMap type="com.zc.cris.mybatis.bean.Employee" id="EmpStep">
+	 	<id column="id" property="id"/>
+	 	<result column="name" property="name"/>
+	 	<result column="email" property="email"/>
+	 	
+	 	<!-- association 定义关联对象的封装规则
+	 			select：表名当前属性是通过调用 指定的 select 方法进行分布查询的结果
+	 			column:指定将第一次查询出来的哪一列的值当做第二次查询的参数
+	 			流程：使用第一次查询的出来的某列的值当做第二次查询的参数并将第二次查询出来的数据封装指向
+	 				第一次查询出来的数据的成员属性
+	 	 -->
+	 	
+	 	<association property="department" 
+	 	select="com.zc.cris.mybatis.dao.DepartmentMapper.findDeptById"
+	 	column="dept_id">
+	 	</association>
+	 </resultMap>
+	 <!-- public Employee findEmpByStep(Integer id); -->
+	 <select id="findEmpByStep" resultMap="EmpStep">
+	 	select id,name,email,dept_id from tb_employee where id = #{id}
+	 </select>
+	 <!-- 
+	 	我们使用分步查询的方式进行联合查询的时候还可以使用延迟加载（懒加载）：
+	 		只有当我们使用到了department 的时候才进行二次查询
+	 		这也叫做分段查询
+	 		需要在全局配置文件中进行两个配置
+	  -->
+	 
+	 
+
+
+	<!-- 
+		自定义某个javaBean 的封装规则
+		type：javaBean的全路径名
+		id：唯一，方便后面引用
+	 -->
+	<resultMap type="com.zc.cris.mybatis.bean.Employee" id="MyMap">
+		<!-- 指定主键列的封装规则，mybatis 底层会进行优化 -->
+		<id column="id" property="id"/>
+		<!-- 定义普通类的封装规则，建议所有的列的封装规则都写上 -->
+		<result column="name" property="name"/>
+		<result column="email" property="email"/>
+		<result column="gender" property="gender"/>
+	</resultMap>
+
+	<!-- resultMap:自定义结果集的映射规则，和resultType 不兼容 -->
+	<!-- public Employee getEmpByIdReturnMyMap(Integer id); -->
+	<select id="getEmpByIdReturnMyMap" resultMap="MyMap">
+		select id,name,email,gender 
+		from tb_employee
+		where id = #{id}
+	</select>
+
+
+	<!-- public Map<String, Employee> getEmpByNameLikeReturnMap(String name); -->
+	<select id="getEmpByNameLikeReturnMap" resultType="com.zc.cris.mybatis.bean.Employee">
+		select id,name,email
+		from tb_employee 
+		where name like #{name} 
+	</select>
+
+	<!-- 将查询结果包装为 map类型，key为列名，值为列值 -->
+	<!-- public Map<String, Object> getEmpByIdReturnMap(Integer id); -->
+	<select id="getEmpByIdReturnMap" resultType="map">
+		select id,name,email
+		from tb_employee 
+		where id = #{id} 
+	</select>
+
+	<!-- 即便返回值类型是集合，也是设置集合中的元素的类型 -->
+	<!-- public List<Employee> getEmpsByNameLike(String name); -->
+	<select id="getEmpsByNameLike" resultType="com.zc.cris.mybatis.bean.Employee">
+		select id,name,email,gender 
+		from tb_employee 
+		where name like #{name} 
+	</select>
+
+	<!-- 
+		单个参数：mybatis不会做特殊处理
+			#{参数名}：直接取出参数值进行数据库操作
+		
+		多个参数：mybatis会将多个参数封装为map
+			key：param1，param2....paramN或者参数的索引也可以
+			value：我们传入的实参
+			示例：sql语句使用#{param1} 获取传入的第一个参数的值
+			
+		命名参数（推荐）：使用注解指定我们传入的参数在map中的key
+			示例：@param("id")
+				map中的key为id，值就是我们传入的id的实参
+				sql语句通过#{id}直接获取id值
+				
+		POJO（第一考虑）：如果多个参数正好使我们业务逻辑的数据模型，直接传入POJO
+			#{属性名}：直接取出传入的pojo的属性值
+		Map（第二考虑）：如果多个参数不是我们业务逻辑中的数据模型，即没有对应的pojo
+			为了方便，可以传入map
+			#{key}：取出我们自定义的map中的value
+			如果map需要经常使用的话，建议编写一个 TO（Transfor Object）数据传输对象来封装多个参数，
+				不必每次都要创建map对象来一个个封装参数
+				
+		## 如果传入的参数是Collection（list，set）类型或者是数组类型
+			key：Collection（#{collection}）,如果是list通常使用 #{list}，数组通常使用 #{array}
+			示例：public Employee getEmployeeByIds(List<Integer> ids);
+				sql取值：#{list[0]}
+				
+		## 参数值的取值：
+				#{}：可以获取map中的值或者pojo对象属性的值
+				${}: 可以获取map中的值或者pojo对象属性的值
+				区别：
+					#{}：以预编译的形式，加参数放入到sql语句中，可以有效防止sql注入
+					${}:取出的值直接放入到sql语句中，会有安全问题（并且很容易出现sql语法问题：name = james ）
+				一般都使用#{}，只有在原生jdbc不支持占位符的地方，可以使用${}:
+					例如：分表的情况下，将不同表名使用${}注入：select * from ${year}_salary;
+						排序：select * from tb_user order by ${name} ${order}
+				使用技巧：传参就用 #{},无法用？占位的sql语句参数就用${}
+	 -->
+	<!-- public Employee getEmpByMap(Map<String, Object> map); -->
+	<select id="getEmpByMap" resultType="com.zc.cris.mybatis.bean.Employee">
+		select
+		id,name,email,gender from ${table}
+		where id = ${id} and name = #{name}
+	</select>
+	 
+	<!-- public Employee getByIdAndName(Integer id, String name) -->
+	<select id="getByIdAndName" resultType="com.zc.cris.mybatis.bean.Employee">
+		select
+		id,name,email,gender from tb_employee 
+		where id = #{id} and name = #{name}
+	</select>
 
 	<!-- id：和接口的对应方法绑定 public Employee getById(Integer id); -->
 	<select id="getById" resultType="emp" databaseId="mysql">

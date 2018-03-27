@@ -11,6 +11,10 @@
 	<settings>
 		<!-- 开启驼峰命名自动匹配：如果数据库的字段名为emp_name, javaBean 的对应属性名为empName，那么无需设置别名，mybatis会自动映射 -->
 		<setting name="mapUnderscoreToCamelCase" value="true" />
+		<!-- 开启懒加载模式 -->
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="aggressiveLazyLoading" value="false"/>
+		
 	</settings>
 
 	<!-- 3. typeAliases:别名处理器，可以为我们的java类型起别名 别名不区分大小写,一般不建议使用 -->
