@@ -1,8 +1,12 @@
 package com.zc.cris.mybatis.bean;
 
+import java.util.List;
+
 public class Department {
+
 	private Integer id;
 	private String name;
+	private List<Employee> employees;
 
 	public Integer getId() {
 		return id;
@@ -18,6 +22,14 @@ public class Department {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
 	}
 
 	@Override

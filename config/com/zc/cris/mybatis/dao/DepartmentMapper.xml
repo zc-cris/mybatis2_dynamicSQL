@@ -4,10 +4,6 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 名称空间为接口的全类名 -->
 <mapper namespace="com.zc.cris.mybatis.dao.DepartmentMapper">
-	
-	<!-- public Department findDeptById(Integer id); -->
-	<select id="findDeptById" resultType="com.zc.cris.mybatis.bean.Department">
-		select id,name from tb_dept where id = #{id}
-	</select>
+
 
 </mapper>

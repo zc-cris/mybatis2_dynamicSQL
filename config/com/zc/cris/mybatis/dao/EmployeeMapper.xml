@@ -4,222 +4,152 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- 名称空间为接口的全类名 -->
 <mapper namespace="com.zc.cris.mybatis.dao.EmployeeMapper">
-
-	<!-- 
-		联合查询：
-		1. 使用级联属性封装结果集(不推荐)
+	<!-- 动态sql标签：
+			if
+			choose（when，otherwise）
+			trim（where，set）
+			foreach
 	 -->
-	<resultMap type="com.zc.cris.mybatis.bean.Employee" id="complexEmp">
-		<id column="eid" property="id"/>
-		<result column="ename" property="name"/>
-		<result column="did" property="department.id"/>
-		<result column="dname" property="department.name"/>
-	</resultMap>
-	<!-- 
-		2.使用 association 标签进行联合查询(关联单个对象的情况下,推荐)
-			property:被引用对象在引用对象中的成员属性名
-			javaType：被引用对象的全路径名
-	 -->
-	<resultMap type="com.zc.cris.mybatis.bean.Employee" id="complexEmp2">
-		<id column="eid" property="id"/>
-		<result column="ename" property="name"/>
-		<association property="department" javaType="com.zc.cris.mybatis.bean.Department">
-			<id column="did" property="id"/>
-			<result column="dname" property="name"/>
-		</association>
-	</resultMap>
-	
-	<!-- public Employee findEmpAndDeptById(Integer id); -->
-	<select id="findEmpAndDeptById" resultMap="complexEmp2">
-		select e.id eid, e.name ename, e.email, e.gender, d.id did, d.name dname from tb_employee e,tb_dept d where e.dept_id = d.id and e.id = #{id} 
-	</select>
-	
-	<!-- 
-		3.实际开发中使用最多的还是分布联合查询
-			不同的对象，不同的接口，不同的mapper映射文件，不同的查询方法
-	 -->
-	 <resultMap type="com.zc.cris.mybatis.bean.Employee" id="EmpStep">
-	 	<id column="id" property="id"/>
-	 	<result column="name" property="name"/>
-	 	<result column="email" property="email"/>
-	 	
-	 	<!-- association 定义关联对象的封装规则
-	 			select：表名当前属性是通过调用 指定的 select 方法进行分布查询的结果
-	 			column:指定将第一次查询出来的哪一列的值当做第二次查询的参数
-	 			流程：使用第一次查询的出来的某列的值当做第二次查询的参数并将第二次查询出来的数据封装指向
-	 				第一次查询出来的数据的成员属性
+	 
+	 <!-- public List<Employee> findEmpsByConditionForeach(List<Integer> ids); -->
+	 <select id="findEmpsByConditionForeach" resultType="com.zc.cris.mybatis.bean.Employee">
+	 	select id,name,gender,email 
+	 	from tb_employee
+	 	<!-- 
+	 		collection：指定要遍历的集合
+	 			list类型将会被特殊封装在map中，该map 的key就是list
+	 		item：将当前遍历出来的元素赋值给指定的变量
+	 		#{item}：取出当前遍历的元素
+	 		index:遍历list就是索引，一般不使用，
+	 				遍历map的时候就是key， item 就是对应的map的 value
 	 	 -->
-	 	
-	 	<association property="department" 
-	 	select="com.zc.cris.mybatis.dao.DepartmentMapper.findDeptById"
-	 	column="dept_id">
-	 	</association>
-	 </resultMap>
-	 <!-- public Employee findEmpByStep(Integer id); -->
-	 <select id="findEmpByStep" resultMap="EmpStep">
-	 	select id,name,email,dept_id from tb_employee where id = #{id}
+	 	<foreach collection="ids" item="item_id" open="where id in (" close=")" separator=",">
+	 		#{item_id}
+	 	</foreach>
 	 </select>
+	 
+	 <!-- public void updateEmp(Employee employee); -->
 	 <!-- 
-	 	我们使用分步查询的方式进行联合查询的时候还可以使用延迟加载（懒加载）：
-	 		只有当我们使用到了department 的时候才进行二次查询
-	 		这也叫做分段查询
-	 		需要在全局配置文件中进行两个配置
+	 	set 标签专门用来做数据的更新操作，可以去掉每个if 分支后面的逗号
+	 		还可以使用第二种方案：使用trim标签也可以很轻松的完成
+	 		只要按照规范来拼接sql语句，我们查询和更新都可以不需要使用trim 标签
 	  -->
+	 <update id="updateEmp">
+	 	update tb_employee e 
+<!-- 	 	<set>
+		 	<if test="name!=null">
+		 	e.name = #{name},
+		 	</if>
+		 	<if test="email!=null">
+		 	e.email = #{email},
+		 	</if> 
+		 	<if test="gender!=null">
+		 	e.gender = #{gender}
+		 	</if>
+	 	</set> -->
+	 	
+	 	<trim prefix="set" suffixOverrides=",">
+	 		<if test="name!=null">
+		 	e.name = #{name},
+		 	</if>
+		 	<if test="email!=null">
+		 	e.email = #{email},
+		 	</if> 
+		 	<if test="gender!=null">
+		 	e.gender = #{gender}
+		 	</if>
+	 	</trim>
+	 	<where>
+	 	e.id = #{id}
+	 	</where>
+	 </update>
+	 
+	 <!-- 不同于if 标签，choose 标签只会进入满足情况的一种test 标签 -->
+	 <!-- public List<Employee> findEmpsByConditionChoose(Employee employee); -->
+	 <select id="findEmpsByConditionChoose" resultType="com.zc.cris.mybatis.bean.Employee">
+	 	select id,name,gender,email
+	 	from tb_employee
+	 	<where>
+	 		<choose>
+	 			<when test="id!=null">
+	 				id = #{id}
+	 			</when>
+	 			<when test="name!=null and name.trim()!=''">
+	 				name like #{name}
+	 			</when>
+	 			<when test="email != null and email.trim()!=''">
+	 				email = #{email}
+	 			</when>
+	 			<otherwise>
+	 				gender = 0
+	 			</otherwise>
+	 		</choose>
+	 	
+	 	</where>
+	 </select>
 	 
 	 
-
-
-	<!-- 
-		自定义某个javaBean 的封装规则
-		type：javaBean的全路径名
-		id：唯一，方便后面引用
-	 -->
-	<resultMap type="com.zc.cris.mybatis.bean.Employee" id="MyMap">
-		<!-- 指定主键列的封装规则，mybatis 底层会进行优化 -->
-		<id column="id" property="id"/>
-		<!-- 定义普通类的封装规则，建议所有的列的封装规则都写上 -->
-		<result column="name" property="name"/>
-		<result column="email" property="email"/>
-		<result column="gender" property="gender"/>
-	</resultMap>
-
-	<!-- resultMap:自定义结果集的映射规则，和resultType 不兼容 -->
-	<!-- public Employee getEmpByIdReturnMyMap(Integer id); -->
-	<select id="getEmpByIdReturnMyMap" resultMap="MyMap">
-		select id,name,email,gender 
-		from tb_employee
-		where id = #{id}
-	</select>
-
-
-	<!-- public Map<String, Employee> getEmpByNameLikeReturnMap(String name); -->
-	<select id="getEmpByNameLikeReturnMap" resultType="com.zc.cris.mybatis.bean.Employee">
-		select id,name,email
-		from tb_employee 
-		where name like #{name} 
-	</select>
-
-	<!-- 将查询结果包装为 map类型，key为列名，值为列值 -->
-	<!-- public Map<String, Object> getEmpByIdReturnMap(Integer id); -->
-	<select id="getEmpByIdReturnMap" resultType="map">
-		select id,name,email
-		from tb_employee 
-		where id = #{id} 
-	</select>
-
-	<!-- 即便返回值类型是集合，也是设置集合中的元素的类型 -->
-	<!-- public List<Employee> getEmpsByNameLike(String name); -->
-	<select id="getEmpsByNameLike" resultType="com.zc.cris.mybatis.bean.Employee">
-		select id,name,email,gender 
-		from tb_employee 
-		where name like #{name} 
-	</select>
-
-	<!-- 
-		单个参数：mybatis不会做特殊处理
-			#{参数名}：直接取出参数值进行数据库操作
-		
-		多个参数：mybatis会将多个参数封装为map
-			key：param1，param2....paramN或者参数的索引也可以
-			value：我们传入的实参
-			示例：sql语句使用#{param1} 获取传入的第一个参数的值
-			
-		命名参数（推荐）：使用注解指定我们传入的参数在map中的key
-			示例：@param("id")
-				map中的key为id，值就是我们传入的id的实参
-				sql语句通过#{id}直接获取id值
-				
-		POJO（第一考虑）：如果多个参数正好使我们业务逻辑的数据模型，直接传入POJO
-			#{属性名}：直接取出传入的pojo的属性值
-		Map（第二考虑）：如果多个参数不是我们业务逻辑中的数据模型，即没有对应的pojo
-			为了方便，可以传入map
-			#{key}：取出我们自定义的map中的value
-			如果map需要经常使用的话，建议编写一个 TO（Transfor Object）数据传输对象来封装多个参数，
-				不必每次都要创建map对象来一个个封装参数
-				
-		## 如果传入的参数是Collection（list，set）类型或者是数组类型
-			key：Collection（#{collection}）,如果是list通常使用 #{list}，数组通常使用 #{array}
-			示例：public Employee getEmployeeByIds(List<Integer> ids);
-				sql取值：#{list[0]}
-				
-		## 参数值的取值：
-				#{}：可以获取map中的值或者pojo对象属性的值
-				${}: 可以获取map中的值或者pojo对象属性的值
-				区别：
-					#{}：以预编译的形式，加参数放入到sql语句中，可以有效防止sql注入
-					${}:取出的值直接放入到sql语句中，会有安全问题（并且很容易出现sql语法问题：name = james ）
-				一般都使用#{}，只有在原生jdbc不支持占位符的地方，可以使用${}:
-					例如：分表的情况下，将不同表名使用${}注入：select * from ${year}_salary;
-						排序：select * from tb_user order by ${name} ${order}
-				使用技巧：传参就用 #{},无法用？占位的sql语句参数就用${}
-	 -->
-	<!-- public Employee getEmpByMap(Map<String, Object> map); -->
-	<select id="getEmpByMap" resultType="com.zc.cris.mybatis.bean.Employee">
-		select
-		id,name,email,gender from ${table}
-		where id = ${id} and name = #{name}
-	</select>
+	 <!-- public List<Employee> findByConditionTrim(Employee employee); -->
+	 <select id="findByConditionTrim" resultType="com.zc.cris.mybatis.bean.Employee">
+	 	select id,name,gender,email 
+	 	from tb_employee 
+	 	<!-- 
+	 		trim(了解)：可以对trim 标签包裹的sql 语句进行自定义拼接
+	 			prefix：给拼串后的sql加上前缀
+	 			prefixOverrides：去掉整个字符串前面多余的字符（以符合sql标准）
+	 			suffix：给拼串后的sql加上后缀
+	 			suffixOverrides：去掉整个字符串后面多余的字符（以符合sql标准）
+	 	 -->
+	 	<trim prefix="where" prefixOverrides="" suffix="" suffixOverrides="and">
+	 	<if test="id!=null">
+	 	id = #{id} and
+	 	</if>
+	 	<if test="name!=null and name.trim()!=''">
+	 	name like #{name} and
+	 	</if> 
+	 	<if test="email!=null &amp;&amp; email.trim()!= &quot;&quot;">
+	 	email = #{email} and
+	 	</if>
+	 	<if test="gender==0 or gender==1">
+	 	gender = #{gender}
+	 	</if>
+	 	</trim>
+	 </select>
 	 
-	<!-- public Employee getByIdAndName(Integer id, String name) -->
-	<select id="getByIdAndName" resultType="com.zc.cris.mybatis.bean.Employee">
-		select
-		id,name,email,gender from tb_employee 
-		where id = #{id} and name = #{name}
-	</select>
-
-	<!-- id：和接口的对应方法绑定 public Employee getById(Integer id); -->
-	<select id="getById" resultType="emp" databaseId="mysql">
-		select
-		id,name,email,gender from tb_employee where id = #{id}
-	</select>
-
-	<!-- 增删该可以定义参数类型 parameterType，但是一般不用定义，并且返回值如果是 Boolean，Integer，Long 类型也无需定义 
-		returnType -->
-	<!-- public boolean add(Employee employee); -->
-	<!-- 获取自增主键的值 mysql如果使用的是自增主键策略，那么可以通过 statement.getGeneratedKeys() 获取到新增数据的id值 
-		useGeneratedKeys:使用自增主键获取主键值策略 keyProperty:指定对应的javaBean的属性值，即mybatis获取到主键值以后封装给javaBean的哪个属性 -->
-	<insert id="add" parameterType="com.zc.cris.mybatis.bean.Employee"
-		useGeneratedKeys="true" keyProperty="id" databaseId="mysql">
-		insert into
-		tb_employee (name,email,gender) values (#{name},#{email},#{gender})
-	</insert>
-
-
-	<!-- Oracle 不支持主键自增：Oracle使用序列来模拟自增，即每次插入数据表的数据的主键都是从序列表中获取的值，那么如何拿到这个值呢？ -->
-	<insert id="add" databaseId="oracle">
-		<!-- keyProperty:查出的主键赋值给javaBean的哪个属性 order="BEFORE"：当前sql在新增sql之前执行 "AFTER":表示当前sql在新增sql之后执行 
-			resultType：查询的数据的返回类型 -->
-		<selectKey keyProperty="id" order="BEFORE" resultType="Integer">
-			<!-- BEFORE:编写查询主键的sql语句 -->
-			select EMPLOYEES_SEQ.nextval from dual
-		</selectKey>
-		<!-- 插入时的主键是从序列表中查询到的 -->
-		insert into employees(EMPLOYEE_ID,LAST_NAME,EMAIL)
-		values
-		(#{id},#{name},#{email})
-
-		<!-- AFTER:编写查询主键的sql语句，这种方式可能存在问题，如果同时插入很多数据，获取的主键值可能是最后一次插入数据的值，所以不建议使用，了解即可 -->
-		<selectKey>
-			select EMPLOYEES_SEQ.currval from dual
-		</selectKey>
-		<!-- 插入时的主键自动从指定的序列表中查询 -->
-		insert into employees(EMPLOYEE_ID,LAST_NAME,EMAIL)
-		values
-		(employees_seq.nextval,#{name},#{email})
-	</insert>
-
-
-	<!-- public Integer update(Employee employee); -->
-	<update id="update">
-		update tb_employee
-		set name=#{name}, email=#{email}, gender=#{gender}
-		where id=#{id}
-	</update>
-
-	<!-- public boolean remove(Integer id); -->
-	<delete id="remove">
-		delete from tb_employee where id=#{id}
-	</delete>
-
+	 <!-- 
+	 	根据查询条件动态拼接sql语句
+	 		如果查询条件带有需要的参数，就把这个参数加入到sql语句中，否则就不加入
+	 		（将我们以往在业务层的处理逻辑放到了sql语句中进行处理，在专门的sql映射文件中进行sql语句拼接
+	 			保持业务层和数据层的纯净）
+	 		
+	 		如果where 后面的第一个参数为null，那么拼接的sql类似于 select id,name,gender,email from tb_employee where and name like ？
+	 			会导致sql 语法错误
+	 				解决方案有两种：1. 直接在 where 字句后面添加 1=1
+	 							2. 通过mybatis 提供的where 标签将整个查询条件包裹起来
+	 								(去掉我们手写的where；并且从第二个查询条件开始，都要以and 开头，推荐使用这种方式)
+	 	 -->
+	 <!-- public List<Employee> findByConditionIf(Employee employee); -->
+	 <select id="findByConditionIf" resultType="com.zc.cris.mybatis.bean.Employee">
+	 	select id,name,gender,email 
+	 	from tb_employee 
+	 	<where>
+	 	<!-- test：判断表达式（OGNL） -->
+	 	<if test="id!=null">
+	 	id = #{id}
+	 	</if>
+	 	<!-- 可以使用去空格方法 -->
+	 	<if test="name!=null and name.trim()!=''">
+	 	and name like #{name}
+	 	</if> 
+	 	<!-- 可以使用转义字符 -->
+	 	<if test="email!=null &amp;&amp; email.trim()!= &quot;&quot;">
+	 	and email = #{email}
+	 	</if>
+	 	<!-- 自动进行字符串和数字之间的判断 "0"==0 -->
+	 	<if test="gender==0 or gender==1">
+	 	and gender = #{gender}
+	 	</if>
+	 	</where>
+	 </select>
 
 </mapper>
