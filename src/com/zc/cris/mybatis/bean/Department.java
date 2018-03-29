@@ -37,4 +37,9 @@ public class Department {
 		return "Department [id=" + id + ", name=" + name + "]";
 	}
 
+	public Department(Integer id) {
+		super();
+		this.id = id;
+	}
+
 }

@@ -11,6 +11,141 @@
 			foreach
 	 -->
 	 
+	 <!-- 
+	 	mybatis的mapper 文件中还支持sql语句片段重用，方便后面引用
+	 		1. sql 抽取，经常要查询的列名或者插入的列名抽取出来方便引用
+	 		2. include 标签用来引用已经抽取出来的sql 片段
+	 		3. include 标签还可以自定义 property，然后sql 片段就可以通过 ${propertyName}的方式取值
+	  -->
+	 <sql id="selectColumn">
+	 		<if test="_databaseId == 'mysql'">
+	 			id,name,email,${_gender}
+	 		</if>
+	 		<if test="_databaseId == 'oracle'">
+	 			employee_id,last_name,email
+	 		</if>
+	 </sql>
+	 <!-- public List<Employee> findEmpsByRepeatedSql(Employee employee); -->
+	 <select id="findEmpsByRepeatedSql" resultType="com.zc.cris.mybatis.bean.Employee">
+	 	<if test="_databaseId == 'mysql'">
+	 		<!-- 引入外部的 sql 片段 -->
+			select 
+			<include refid="selectColumn">
+			<property name="_gender" value="gender"/>
+			</include>
+			from tb_employee
+		<if test="_parameter != null">
+			where name like #{name}
+		</if>
+	 	</if>
+	 	
+		<if test="_databaseId == 'oracle'">
+			<!-- 引入外部的 sql 片段 -->
+			select  <include refid="selectColumn"></include>
+			from employees 
+			<if test="_parameter != null">
+			where name like #{_parameter.name}
+			</if>
+		</if>	
+	 </select>
+	 
+	 
+	 <!-- public List<Employee> findEmpsByInnerParams(Employee employee); -->
+	 <!-- 
+	 	mybatis为我们还提供了两个非常有效的参数用于sql语句判断
+	 		_parameter:代表整个参数
+	 			单个参数：_parameter就是指这个参数
+	 			多个参数：会被封装成一个map，_parameter就是代表这个map
+	 		
+	 		_databaseId:如果我们业务需求两个不同数据库产品，并且配置了 databaseIdProvider 标签
+	 			_databaseId就是代表当前数据库的别名（这个别名来自于我们在核心文件的配置）
+	 			这样子就大大简化了我们为不同数据库产品提供不同标签来实现相同功能
+	 		
+	  -->
+	 <select id="findEmpsByInnerParams" resultType="com.zc.cris.mybatis.bean.Employee">
+	 	<!-- 
+	 		bind 标签还可以将 OGNL 表达式的值绑定到一个变量中，方便后面的sql语句来引用这个变量（以模糊查询为例）
+	 		了解即可，很少使用，但是要知道
+	 	 -->
+	 	<!-- bind规则：以某个字符开始（不能为空），我们传进来的emplyee的name属性为中间值，结尾任意字符（可以为空） -->
+	 	<bind name="_name" value="'_'+name+'%'"/>
+	 	<if test="_databaseId == 'mysql'">
+			select id,name,email,gender from tb_employee
+			<if test="_parameter != null">
+				<!-- where name = #{name} -->
+				where name like #{_name}
+			</if>
+	 	</if>
+	 	
+		<if test="_databaseId == 'oracle'">
+			select employee_id,last_name,email from employees 
+			<if test="_parameter != null">
+				where name = #{_parameter.name}
+			</if>
+		</if>		
+	 </select>
+	 
+	 
+	 <!-- 
+	 	orcale数据库批量保存：
+	 		因为oracle不支持values(),(),()这样子的语法
+	 		所以需要根据oracle支持的批量方式进行操作
+	 			1. 方式一：多条insert语句放在begin和end之间（过程）
+	 				begin
+	 					insert into employees(employee_id,last_name,email)
+	 					values(employees_seq.nextval,'test01','test01@qq.com');
+	 					insert into employees(employee_id,last_name,email)
+	 					values(employees_seq.nextval,'test02','test02@qq.com');
+	 				end;
+	 			2. 方式二：利用子查询和哑表之间的union
+	 					insert into employees(employee_id,last_name,email)
+	 						select employees_seq.nextval,lastName,email from(
+	 							select 'test001' lastName,'test001@qq.com' email from dual
+	 							union 
+	 							select 'test002' lastName,'test002@qq.com' email from dual
+	 							union
+	 							select 'test003' lastName,'test003@qq.com' email from dual
+	 						)
+	  -->
+	 <!-- public void insertForeach(@Param("emps") List<Employee> emps); -->
+	 <!-- 第一种oracle批量操作方式 -->
+	  <insert id="insertForeach" databaseId="oracle">
+	  	<foreach collection="emps" item="emp" open="begin" close="end;">
+	  		insert into employees(employee_id,last_name,email)
+	 		values(employees_seq.nextval,#{emp.name}, #{emp.email});
+	  	</foreach>
+	  	
+	  	<!-- oracle的第二种批量方式 -->
+	  		insert into employees(employee_id,last_name,email)
+	  			<foreach collection="emps" item="emp" open="select employees_seq.nextval,lastName,email from("
+	  			close=")" separator="union">
+	  				select #{emp.name} lastName,#{emp.email} email from dual
+	  			</foreach>
+	  </insert>
+	 
+	 <!-- public void insertForeach(@Param("emps") List<Employee> emps); -->
+	 <insert id="insertForeach">
+	 	insert into tb_employee (name,email,gender,dept_id)
+	 	values
+	 	<!-- 使用foreach 标签进行批量的增加操作
+	 		主要是mysql支持 values(xxx),(xxx),(xxx)... 的语法格式 
+	 	-->
+	 	<foreach collection="emps" item="emp" separator=",">
+	 	(#{emp.name}, #{emp.email}, #{emp.gender}, #{emp.department.id})
+	 	</foreach>
+	 	
+	 	<!-- 还可以使用第二种方法进行批量增加操作:
+	 		批量执行insert语句，需要在mysql的连接属性上进行额外设置（不推荐这种方法）
+	 		但是这种方式不仅可以批量增加，还可以进行批量更新和删除操作
+	 	-->
+	 	<!-- <foreach collection="emps" item="emp" separator=";">
+	 	insert into tb_employee (name,email,gender,dept_id)
+	 	values
+	 	(#{emp.name}, #{emp.email}, #{emp.gender}, #{emp.department.id})
+	 	</foreach> -->
+	 </insert>
+	 
+	 
 	 <!-- public List<Employee> findEmpsByConditionForeach(List<Integer> ids); -->
 	 <select id="findEmpsByConditionForeach" resultType="com.zc.cris.mybatis.bean.Employee">
 	 	select id,name,gender,email 

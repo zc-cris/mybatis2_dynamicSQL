@@ -69,4 +69,13 @@ public class Employee {
 
 	}
 
+	public Employee(Integer id, String name, Character gender, String email, Department department) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+		this.email = email;
+		this.department = department;
+	}
+
 }
